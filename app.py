@@ -20,10 +20,12 @@ with st.sidebar:
     st.markdown("1. Paste a polite corporate email.\n2. AI detects hidden tone.\n3. Get the unfiltered translation.")
 
 # Main input area
+"""
 email_text = st.text_area(
     "Paste the message here:", 
     height=150
 )
+"""
 
 if st.button("Decode Message 🔍", type="primary"):
     if not api_key:
