@@ -68,7 +68,7 @@ if st.button("Decode Message 🔍", type="primary"):
         with st.spinner("Decoding rage, tilt, and internet tactics..."):
             try:
                 # Use standard model initialization
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                model = genai.GenerativeModel('gemini-3.8-flash')
                 
                 content_inputs = [prompt]
                 if message_text.strip():
