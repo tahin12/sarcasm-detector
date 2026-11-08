@@ -5,7 +5,7 @@ import google.generativeai as genai
 # Page Configuration
 st.set_page_config(page_title="Corporate Sarcasm Translator", layout="centered")
 
-st.title("Corporate Cop!", color='blue')
+st.title("Corporate Cop!", color="blue")
 st.write("Paste that shady work email or text below. We'll decode the hidden rage and translate it into brutal honesty.")
 
 # Sidebar for API Key input
