@@ -3,9 +3,9 @@ import streamlit as st
 import google.generativeai as genai
 
 # Page Configuration
-st.set_page_config(page_title="Corporate Sarcasm Translator", page_icon="🕵️‍♂️", layout="centered")
+st.set_page_config(page_title="Corporate Sarcasm Translator", layout="centered")
 
-st.title("🕵️‍♂️ Corporate Sarcasm & Passive-Aggressive Translator")
+st.title("Corporate Sarcasm & Passive-Aggressive Translator")
 st.write("Paste that shady work email or text below. We'll decode the hidden rage and translate it into brutal honesty.")
 
 # Sidebar for API Key input
@@ -14,14 +14,14 @@ with st.sidebar:
     api_key = st.text_input("Enter your Google Gemini API Key:", type="password")
     st.markdown("[Get a free key here](https://aistudio.google.com/)")
     st.markdown("---")
+    st.markdown("---")
     st.markdown("### How it works:")
     st.markdown("1. Paste a polite corporate email.\n2. AI detects hidden tone.\n3. Get the unfiltered translation.")
 
 # Main input area
 email_text = st.text_area(
-    "Paste the email or message here:", 
-    height=150, 
-    placeholder="e.g., 'Per my last email, as previously discussed, please let me know when you plan to wrap this up... thanks!'"
+    "Paste the message here:", 
+    height=150
 )
 
 if st.button("Decode Message 🔍", type="primary"):
@@ -35,9 +35,9 @@ if st.button("Decode Message 🔍", type="primary"):
         prompt = f"""
         You are a cynical, hyper-observant corporate body-language and tone expert. 
         Analyze the following workplace message and break it down into 3 sections:
-        1. **The Vibe Check:** Rate the Passive-Aggressive / Sarcasm level from 1 to 10 and name the emotion (e.g., "Seething Rage wrapped in polite punctuation").
-        2. **Between the Lines:** What are they *actually* trying to say? Unpack the hidden subtext.
-        3. **The Brutally Honest Translation:** Rewrite the message into what they wish they could type if HR didn't exist.
+        1. **The Brutally Honest Translation:** Rewrite the message into what they wish they could type if HR didn't exist.
+        2. **The Vibe Check:** Rate the Passive-Aggressive / Sarcasm level from 1 to 10 and name the emotion (e.g., "Seething Rage wrapped in polite punctuation").
+        3. **Between the Lines:** What are they *actually* trying to say? Unpack the hidden subtext.
 
         Message to analyze:
         "{email_text}"
@@ -48,7 +48,7 @@ if st.button("Decode Message 🔍", type="primary"):
                 model = genai.GenerativeModel('gemini-3.8-flash')
                 response = model.generate_content(prompt)
 
-                st.markdown("### 📊 Analysis Results")
+                st.markdown("### Analysis Results")
                 st.markdown(response.text)
 
             except Exception as e:
