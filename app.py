@@ -45,7 +45,7 @@ if st.button("Decode Message 🔍", type="primary"):
 
         with st.spinner("Analyzing passive-aggressive undertones..."):
             try:
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                model = genai.GenerativeModel('gemini-3-flash')
                 response = model.generate_content(prompt)
 
                 st.markdown("### 📊 Analysis Results")
