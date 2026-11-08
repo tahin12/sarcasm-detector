@@ -5,7 +5,7 @@ import google.generativeai as genai
 # Page Configuration
 st.set_page_config(page_title="Corporate Sarcasm Translator", layout="centered")
 st.markdown(
-    "<h1 style='color: pink;'>Corporate Cop!</h1>", unsafe_allow_html=True
+    "<h1 style='color: purple;'>Corporate Cop!</h1>", unsafe_allow_html=True
 )
 st.write("Paste that shady work email or text below. We'll decode the hidden rage and translate it into brutal honesty.")
 
