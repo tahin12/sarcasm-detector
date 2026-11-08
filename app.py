@@ -3,7 +3,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Page Configuration
-st.set_page_config(page_title="Corporate Sarcasm Translator", layout="left")
+st.set_page_config(page_title="Corporate Sarcasm Translator", layout="centered")
 st.markdown(
     "<h1 style='color: purple;'>Corporate Cop!</h1>", unsafe_allow_html=True
 )
