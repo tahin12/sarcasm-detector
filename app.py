@@ -8,7 +8,6 @@ st.markdown(
     "<h1 style='color: purple;'>Corporate Cop!</h1>", unsafe_allow_html=True
 )
 st.write("Paste that shady work email or text below. We'll decode the hidden rage and translate it into brutal honesty.")
-
 # Sidebar for API Key input
 with st.sidebar:
     st.header("Configuration")
@@ -20,7 +19,7 @@ with st.sidebar:
 
 # Main input area
 email_text = st.text_area( 
-"", height=120
+"", height=150
 )
 
 if st.button("Decode Message 🔍", type="primary"):
