@@ -20,7 +20,7 @@ with st.sidebar:
 
 # Main input area
 email_text = st.text_area( 
-"", height=150
+"", height=120
 )
 
 if st.button("Decode Message 🔍", type="primary"):
