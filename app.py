@@ -15,13 +15,12 @@ with st.sidebar:
     api_key = st.text_input("Enter your Google Gemini API Key:", type="password")
     st.markdown("[Get a free key here](https://aistudio.google.com/)")
     st.markdown("---")
-    st.markdown("---")
     st.markdown("### How it works:")
     st.markdown("1. Paste a polite corporate email.\n2. AI detects hidden tone.\n3. Get the unfiltered translation.")
 
 # Main input area
 email_text = st.text_area( 
-    height=150
+"", height=150
 )
 
 if st.button("Decode Message 🔍", type="primary"):
